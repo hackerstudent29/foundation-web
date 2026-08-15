@@ -18,7 +18,7 @@ export default function PlacementMarquee({ logos = [] }: PlacementMarqueeProps) 
       <img
         src={logo.src}
         alt={logo.alt}
-        className="max-w-full max-h-full object-contain dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+        className="max-w-full max-h-full object-contain"
         style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
         loading="lazy"
       />

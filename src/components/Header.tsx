@@ -69,7 +69,7 @@ export default function Header() {
         id="header"
         onMouseLeave={handleHeaderMouseLeave}
       >
-        <div className="header-container">
+        <div className="header-container header-padding">
           <a href="#" className="logo-link" id="logo-link" aria-label="MSAJCEA Home">
             <img src="/images/msajce-logo-transparent.png" alt="MSAJCEA Logo" className="header-logo" />
           </a>

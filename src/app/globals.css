@@ -792,3 +792,15 @@ body.light-theme .clip-mask {
   animation: marquee-scroll 25s linear infinite !important;
 }
 
+@keyframes marquee-scroll-half {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-half {
+  animation: marquee-scroll-half 25s linear infinite !important;
+}

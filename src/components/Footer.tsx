@@ -139,8 +139,24 @@ function FooterLinksSection({ animate }: { animate: boolean }) {
 }
 
 // --- Block 2: Giant wordmark ---
-function FooterGiantWordmark() {
+function FooterGiantWordmark({ revealed = false }: { revealed?: boolean }) {
   const [hovered, setHovered] = React.useState(false);
+  const [introPlayed, setIntroPlayed] = React.useState(false);
+  const [introActive, setIntroActive] = React.useState(false);
+
+  React.useEffect(() => {
+    if (revealed && !introPlayed) {
+      setIntroPlayed(true);
+      setIntroActive(true);
+      // Let the animation play out and stay visible for a moment, then fade back
+      const timer = setTimeout(() => {
+        setIntroActive(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [revealed, introPlayed]);
+
+  const isActive = hovered || introActive;
   const letters = "MSAJCEA".split("");
 
   return (
@@ -156,13 +172,13 @@ function FooterGiantWordmark() {
               key={i}
               className="text-[18vw] font-serif font-black tracking-tighter leading-none select-none inline-block"
               style={{
-                WebkitTextFillColor: hovered ? "var(--primary-blue)" : "transparent",
-                WebkitTextStroke: hovered ? "0px" : "1px rgba(150, 150, 150, 0.2)",
-                textShadow: hovered ? "0 0 40px rgba(0, 93, 166, 0.35)" : "none",
+                WebkitTextFillColor: isActive ? "var(--primary-blue)" : "transparent",
+                WebkitTextStroke: isActive ? "0px" : "1px rgba(150, 150, 150, 0.2)",
+                textShadow: isActive ? "0 0 40px rgba(0, 93, 166, 0.35)" : "none",
                 transitionProperty: "all",
                 transitionDuration: "0.3s",
                 transitionTimingFunction: "ease-out",
-                transitionDelay: hovered ? `${i * 0.06}s` : `${(letters.length - 1 - i) * 0.04}s`,
+                transitionDelay: isActive ? `${i * 0.06}s` : `${(letters.length - 1 - i) * 0.04}s`,
               }}
             >
               {letter}
@@ -232,7 +248,7 @@ export default function Footer() {
       >
         <FooterLinksSection animate={revealed} />
         <div className="flex flex-col">
-          <FooterGiantWordmark />
+          <FooterGiantWordmark revealed={revealed} />
           <FooterCopyrightBar />
         </div>
       </footer>

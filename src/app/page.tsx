@@ -5,6 +5,10 @@ import DynamicText from "@/components/DynamicText";
 import PlacementMarquee from "@/components/PlacementMarquee";
 import RotatingWord from "@/components/RotatingWord";
 import Footer from "@/components/Footer";
+import WhyJoinSection from "@/components/WhyJoinSection";
+import AboutBannerSection from "@/components/AboutBannerSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import AcademicProgrammesSection from "@/components/AcademicProgrammesSection";
 
 export default function Home() {
   return (
@@ -203,119 +207,19 @@ export default function Home() {
           />
         </section>
 
+        {/* ── Academic Programmes (New Design) ── */}
+        <AcademicProgrammesSection />
 
+        {/* ── Why Join MSAJCE? ── */}
+        <WhyJoinSection />
 
-        {/* ── Stats Section ── */}
-        <section className="editorial-grid-section" id="stats-section">
-          <div className="section-header">
-            <h2>MSAJCE in Numbers</h2>
-          </div>
-          <div className="stats-grid">
-            <div className="stats-card">
-              <span className="stats-number">25+</span>
-              <span className="stats-label">Years of Excellence</span>
-            </div>
-            <div className="stats-card">
-              <span className="stats-number">5000+</span>
-              <span className="stats-label">Successful Alumni</span>
-            </div>
-            <div className="stats-card">
-              <span className="stats-number">95%</span>
-              <span className="stats-label">Placement Record</span>
-            </div>
-            <div className="stats-card">
-              <span className="stats-number">50+</span>
-              <span className="stats-label">Industry Recruiters</span>
-            </div>
-          </div>
-        </section>
+        {/* ── About Banner Section ── */}
+        <AboutBannerSection />
 
-        {/* ── Departments Section ── */}
-        <section className="editorial-grid-section" id="departments-section">
-          <div className="section-header">
-            <h2>Academic Departments</h2>
-            <p className="section-subtitle">Choose from our specialized engineering domains designed for future innovators.</p>
-          </div>
-          <div className="departments-grid">
-            <div className="dept-card bg-white text-black">
-              <div className="dept-card-body">
-                <span className="dept-code">CSE</span>
-                <h3>Computer Science &amp; Engineering</h3>
-                <p>Focuses on advanced software development, AI, machine learning, systems architecture, and cyber security.</p>
-                <a href="#dept-cse" className="dept-link">Explore CSE →</a>
-              </div>
-            </div>
-            <div className="dept-card bg-blue text-white">
-              <div className="dept-card-body">
-                <span className="dept-code">IT</span>
-                <h3>Information Technology</h3>
-                <p>Specialized curriculum in cloud architecture, network infrastructure, database administration, and web engineering.</p>
-                <a href="#dept-it" className="dept-link text-white">Explore IT →</a>
-              </div>
-            </div>
-            <div className="dept-card bg-black text-white">
-              <div className="dept-card-body">
-                <span className="dept-code">ECE</span>
-                <h3>Electronics &amp; Communication</h3>
-                <p>Study microelectronics, wireless networks, IoT systems, signal processing, and telecommunication technologies.</p>
-                <a href="#dept-ece" className="dept-link text-white">Explore ECE →</a>
-              </div>
-            </div>
-            <div className="dept-card bg-gray text-white">
-              <div className="dept-card-body">
-                <span className="dept-code">AIDS</span>
-                <h3>AI &amp; Data Science</h3>
-                <p>Curriculum designed for big data analysis, data warehousing, deep learning, and predictive computational modelling.</p>
-                <a href="#dept-ads" className="dept-link text-white">Explore AIDS →</a>
-              </div>
-            </div>
-            <div className="dept-card bg-white text-black">
-              <div className="dept-card-body">
-                <span className="dept-code">MECH</span>
-                <h3>Mechanical Engineering</h3>
-                <p>Covers computer-aided design, robotics, fluid dynamics, thermodynamic systems, and smart automation.</p>
-                <a href="#dept-mech" className="dept-link">Explore Mech →</a>
-              </div>
-            </div>
-            <div className="dept-card bg-blue text-white">
-              <div className="dept-card-body">
-                <span className="dept-code">EEE</span>
-                <h3>Electrical &amp; Electronics</h3>
-                <p>Focus on clean energy grid systems, power electronics, electric vehicle technologies, and electrical controls.</p>
-                <a href="#dept-eee" className="dept-link text-white">Explore EEE →</a>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* ── Testimonials ── */}
+        <TestimonialsSection />
 
-        {/* ── Placement Partners ── */}
-        <section className="editorial-grid-section" id="recruiters-section">
-          <div className="section-header">
-            <h2>Our Placement Network</h2>
-            <p className="section-subtitle">MSAJCE students are hired by top-tier MNCs and technology startups globally.</p>
-          </div>
-          <div className="partners-grid">
-            {[
-              { src: "/images/amazon.svg", alt: "Amazon" },
-              { src: "/images/cognizant.svg", alt: "Cognizant" },
-              { src: "/images/zoho.svg", alt: "Zoho" },
-              { src: "/images/tcs.svg", alt: "TCS" },
-              { src: "/images/infosys.svg", alt: "Infosys" },
-              { src: "/images/wipro.svg", alt: "Wipro" },
-              { src: "/images/ibm.svg", alt: "IBM" },
-              { src: "/images/hitachi.svg", alt: "Hitachi" },
-              { src: "/images/atos.svg", alt: "Atos" },
-              { src: "/images/lenovo.svg", alt: "Lenovo" },
-              { src: "/images/valeo.svg", alt: "Valeo" },
-            ].map((logo) => (
-              <div className="partner-logo-box" key={logo.alt}>
-                <img src={logo.src} alt={`${logo.alt} Logo`} className="partner-logo" />
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── About / Info Split ── */}
+        {/* ── The MSAJCE Edge / About ── */}
         <section className="editorial-info-split" id="about-section">
           <div className="info-split-grid">
             <div className="info-image-block bg-blue text-white">

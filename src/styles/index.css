@@ -183,11 +183,14 @@ body::-webkit-scrollbar {
     transition: var(--transition-smooth);
 }
 
+.header-padding {
+    padding: 0 40px;
+}
+
 .header-container {
     width: 100%;
     max-width: none;
     margin: 0 auto;
-    padding: 0 40px;
     height: 72px;
     display: flex;
     align-items: center;
@@ -1077,7 +1080,7 @@ body::-webkit-scrollbar {
 
 /* Laptop / Desktop Screens (Up to 1440px) */
 @media screen and (max-width: 1440px) {
-    .header-container {
+    .header-padding {
         padding: 0 30px;
     }
     .hero-text-block {
@@ -1160,7 +1163,7 @@ body::-webkit-scrollbar {
 
 /* Mobile & Tablet Navigation (Up to 1024px) */
 @media screen and (max-width: 1024px) {
-    .header-container {
+    .header-padding {
         padding: 0 20px;
     }
 
