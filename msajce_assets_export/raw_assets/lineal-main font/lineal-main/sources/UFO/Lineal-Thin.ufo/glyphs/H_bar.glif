@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Hbar" format="2">
+  <advance width="520"/>
+  <unicode hex="0126"/>
+  <outline>
+    <contour>
+      <point x="80" y="706" type="line"/>
+      <point x="80" y="0" type="line"/>
+      <point x="120" y="0" type="line"/>
+      <point x="120" y="332" type="line"/>
+      <point x="400" y="332" type="line"/>
+      <point x="400" y="0" type="line"/>
+      <point x="440" y="0" type="line"/>
+      <point x="440" y="706" type="line"/>
+      <point x="400" y="706" type="line"/>
+      <point x="400" y="372" type="line"/>
+      <point x="120" y="372" type="line"/>
+      <point x="120" y="706" type="line"/>
+    </contour>
+    <contour>
+      <point x="20" y="552" type="line"/>
+      <point x="500" y="552" type="line"/>
+      <point x="500" y="585" type="line"/>
+      <point x="20" y="585" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 20:22:29 +0000</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ring" format="2">
+  <advance width="285"/>
+  <unicode hex="02DA"/>
+  <outline>
+    <component base="ringcomb" identifier="0258D65C"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-07-08 14:45:32 +0000</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>0258D65C</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

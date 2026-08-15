@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="d" format="2">
+  <advance width="589"/>
+  <unicode hex="0064"/>
+  <anchor x="282" y="0" name="bottom"/>
+  <anchor x="282" y="257" name="center"/>
+  <anchor x="272" y="513" name="top"/>
+  <anchor x="549" y="706" name="topright"/>
+  <outline>
+    <component base="b" xScale="-1" xOffset="589"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 17:20:07 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>o</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>n</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ellipsis" format="2">
+  <advance width="814"/>
+  <unicode hex="2026"/>
+  <outline>
+    <component base="period" xOffset="556" identifier="1A6B43D2"/>
+    <component base="period" xOffset="278" identifier="09A27EBE"/>
+    <component base="period" identifier="64F88F71"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2020-05-14 14:00:18 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>period</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>period</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>09A27EBE</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+        <key>1A6B43D2</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+        <key>64F88F71</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

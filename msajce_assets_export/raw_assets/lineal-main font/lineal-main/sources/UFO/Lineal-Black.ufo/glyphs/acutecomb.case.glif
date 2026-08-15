@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="acutecomb.case" format="2">
+  <advance width="346"/>
+  <anchor x="179" y="513" name="_top"/>
+  <anchor x="179" y="732" name="top"/>
+  <outline>
+    <contour>
+      <point x="51" y="553" type="line"/>
+      <point x="315" y="604" type="line"/>
+      <point x="287" y="727" type="line"/>
+      <point x="25" y="655" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+    </dict>
+  </lib>
+</glyph>

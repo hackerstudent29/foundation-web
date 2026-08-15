@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hungarumlaut" format="2">
+  <advance width="304"/>
+  <unicode hex="02DD"/>
+  <outline>
+    <component base="hungarumlautcomb" identifier="7CB0E7FC"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-07-08 14:45:32 +0000</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>7CB0E7FC</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

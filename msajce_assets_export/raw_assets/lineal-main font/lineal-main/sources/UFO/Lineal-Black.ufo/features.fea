@@ -1,0 +1,216 @@
+# automatic
+@Uppercase = [ A Aacute Abreve Acircumflex Adieresis Agrave Amacron Aogonek Aring Atilde AE B C Cacute Ccaron Ccedilla Ccircumflex Cdotaccent D Dcaron Dcroat Eth E Eacute Ecaron Ecircumflex Edieresis Edotaccent Egrave Emacron Eogonek Etilde Schwa F G Gbreve Gcircumflex Gcommaaccent Gdotaccent Gmacron H Hbar Hcircumflex I IJ Iacute Icircumflex Idieresis Idotaccent Igrave Imacron Iogonek Itilde J Jacute Jcircumflex K Kcommaaccent L Lacute Lcaron Lcommaaccent Lslash M N Nacute Ncaron Ncommaaccent Ntilde O Oacute Ocircumflex Odieresis Ograve Ohungarumlaut Omacron Oslash Otilde OE P Thorn Q R Racute Rcaron Rcommaaccent S Sacute Scaron Scedilla Scircumflex Scommaaccent Germandbls T Tcaron Tcedilla Tcommaaccent U Uacute Ubreve Ucircumflex Udieresis Ugrave Uhungarumlaut Umacron Uogonek Uring Utilde V W Wacute Wcircumflex Wdieresis Wgrave X Y Yacute Ycircumflex Ydieresis Ygrave Ytilde Z Zacute Zcaron Zdotaccent Saltillo O.001 Lcommaaccent.loclMAH Ncommaaccent.loclMAH A.ss01 Aacute.ss01 Abreve.ss01 Acircumflex.ss01 Adieresis.ss01 Agrave.ss01 Aogonek.ss01 Aring.ss01 Atilde.ss01 C.ss01 Cacute.ss01 Ccaron.ss01 Ccedilla.ss01 Cdotaccent.ss01 D.ss01 Dcaron.ss01 Dcroat.ss01 Eth.ss01 Schwa.ss01 G.ss01 J.ss01 K.ss01 Kcommaaccent.ss01 M.ss01 N.ss01 Nacute.ss01 Ncaron.ss01 Ncommaaccent.ss01 Ntilde.ss01 O.ss01 Oacute.ss01 Ocircumflex.ss01 Odieresis.ss01 Ograve.ss01 Otilde.ss01 Q.ss01 V.ss01 W.ss01 Wacute.ss01 Wcircumflex.ss01 Wdieresis.ss01 Wgrave.ss01 C.ss03 Cacute.ss03 Ccaron.ss03 Ccedilla.ss03 Cdotaccent.ss03 L_L.dlig ];
+
+# Prefix: Languagesystems
+# automatic
+languagesystem DFLT dflt;
+languagesystem DFLT MAH;
+
+languagesystem latn dflt;
+languagesystem latn AZE;
+languagesystem latn CRT;
+languagesystem latn KAZ;
+languagesystem latn TAT;
+languagesystem latn TRK;
+languagesystem latn ROM;
+languagesystem latn MOL;
+languagesystem latn MAH;
+languagesystem latn NLD;
+
+feature aalt {
+# automatic
+feature locl;
+feature ordn;
+feature case;
+feature ss01;
+feature ss02;
+feature ss03;
+} aalt;
+
+feature ccmp {
+# automatic
+lookup ccmp_Other_1 {
+	@CombiningTopAccents = [acutecomb brevecomb caroncomb circumflexcomb commaturnedabovecomb dieresiscomb dotaccentcomb gravecomb hungarumlautcomb macroncomb ringcomb tildecomb];
+	lookupflag UseMarkFilteringSet @CombiningTopAccents;
+	sub i' @CombiningTopAccents by idotless;
+	sub j' @CombiningTopAccents by jdotless;
+} ccmp_Other_1;
+
+lookup ccmp_Other_2 {
+	lookupflag 0;
+	@Markscomb = [dieresiscomb gravecomb acutecomb circumflexcomb caroncomb brevecomb tildecomb macroncomb];
+	@MarkscombCase = [dieresiscomb.case gravecomb.case acutecomb.case circumflexcomb.case caroncomb.case brevecomb.case tildecomb.case macroncomb.case];
+	sub @Markscomb @Markscomb' by @MarkscombCase;
+	sub @Uppercase @Markscomb' by @MarkscombCase;
+} ccmp_Other_2;
+
+lookup ccmp_Other_3 {
+	lookupflag 0;
+	sub @Markscomb' @MarkscombCase by @MarkscombCase;
+	sub @MarkscombCase @Markscomb' by @MarkscombCase;
+} ccmp_Other_3;
+} ccmp;
+
+feature locl {
+# automatic
+language MAH;
+lookup locl_noScript_0 {
+	sub commaaccentcomb by commaaccentcomb.loclMAH;
+} locl_noScript_0;
+
+script latn;
+language AZE;
+lookup locl_latn_0 {
+	sub i by idotaccent;
+} locl_latn_0;
+language CRT;
+lookup locl_latn_0;
+language KAZ;
+lookup locl_latn_0;
+language TAT;
+lookup locl_latn_0;
+language TRK;
+lookup locl_latn_0;
+
+script latn;
+language ROM;
+lookup locl_latn_1 {
+	sub Scedilla by Scommaaccent;
+	sub scedilla by scommaaccent;
+	sub Tcedilla by Tcommaaccent;
+	sub tcedilla by tcommaaccent;
+} locl_latn_1;
+language MOL;
+lookup locl_latn_1;
+
+script latn;
+language MAH;
+lookup locl_latn_2 {
+	sub Lcommaaccent by Lcommaaccent.loclMAH;
+	sub Ncommaaccent by Ncommaaccent.loclMAH;
+	sub lcommaaccent by lcommaaccent.loclMAH;
+	sub ncommaaccent by ncommaaccent.loclMAH;
+} locl_latn_2;
+
+script latn;
+language NLD;
+lookup locl_latn_3 {
+	sub iacute j' by jacute;
+	sub Iacute J' by Jacute;
+} locl_latn_3;
+} locl;
+
+feature ordn {
+# automatic
+sub N o period by numero;
+} ordn;
+
+feature case {
+# automatic
+sub hyphen by hyphen.case;
+sub guillemotleft by guillemotleft.case;
+sub guillemotright by guillemotright.case;
+sub dieresiscomb by dieresiscomb.case;
+sub gravecomb by gravecomb.case;
+sub acutecomb by acutecomb.case;
+sub circumflexcomb by circumflexcomb.case;
+sub caroncomb by caroncomb.case;
+sub brevecomb by brevecomb.case;
+sub tildecomb by tildecomb.case;
+sub macroncomb by macroncomb.case;
+} case;
+
+feature dlig {
+# automatic
+lookupflag IgnoreMarks;
+sub L L by L_L.dlig;
+} dlig;
+
+feature liga {
+# automatic
+lookupflag IgnoreMarks;
+sub f i by fi.liga;
+} liga;
+
+feature ss01 {
+# automatic
+featureNames {
+	name "DIN-like capitals";
+};
+sub A by A.ss01;
+sub Aacute by Aacute.ss01;
+sub Abreve by Abreve.ss01;
+sub Acircumflex by Acircumflex.ss01;
+sub Adieresis by Adieresis.ss01;
+sub Agrave by Agrave.ss01;
+sub Aogonek by Aogonek.ss01;
+sub Aring by Aring.ss01;
+sub Atilde by Atilde.ss01;
+sub C by C.ss01;
+sub Cacute by Cacute.ss01;
+sub Ccaron by Ccaron.ss01;
+sub Ccedilla by Ccedilla.ss01;
+sub Cdotaccent by Cdotaccent.ss01;
+sub D by D.ss01;
+sub Dcaron by Dcaron.ss01;
+sub Dcroat by Dcroat.ss01;
+sub Eth by Eth.ss01;
+sub Schwa by Schwa.ss01;
+sub G by G.ss01;
+sub J by J.ss01;
+sub K by K.ss01;
+sub Kcommaaccent by Kcommaaccent.ss01;
+sub M by M.ss01;
+sub N by N.ss01;
+sub Nacute by Nacute.ss01;
+sub Ncaron by Ncaron.ss01;
+sub Ncommaaccent by Ncommaaccent.ss01;
+sub Ntilde by Ntilde.ss01;
+sub O by O.ss01;
+sub Oacute by Oacute.ss01;
+sub Ocircumflex by Ocircumflex.ss01;
+sub Odieresis by Odieresis.ss01;
+sub Ograve by Ograve.ss01;
+sub Otilde by Otilde.ss01;
+sub Q by Q.ss01;
+sub V by V.ss01;
+sub W by W.ss01;
+sub Wacute by Wacute.ss01;
+sub Wcircumflex by Wcircumflex.ss01;
+sub Wdieresis by Wdieresis.ss01;
+sub Wgrave by Wgrave.ss01;
+sub zero by zero.ss01;
+sub one by one.ss01;
+sub two by two.ss01;
+sub four by four.ss01;
+sub five by five.ss01;
+sub six by six.ss01;
+sub seven by seven.ss01;
+sub nine by nine.ss01;
+} ss01;
+
+feature ss02 {
+# automatic
+featureNames {
+	name "Classic lowercase";
+};
+sub m by m.ss02;
+sub n by n.ss02;
+sub nacute by nacute.ss02;
+sub ncaron by ncaron.ss02;
+sub ncommaaccent by ncommaaccent.ss02;
+sub ntilde by ntilde.ss02;
+} ss02;
+
+feature ss03 {
+# automatic
+featureNames {
+	name "Round C";
+};
+sub C by C.ss03;
+sub Cacute by Cacute.ss03;
+sub Ccaron by Ccaron.ss03;
+sub Ccedilla by Ccedilla.ss03;
+sub Cdotaccent by Cdotaccent.ss03;
+} ss03;
+

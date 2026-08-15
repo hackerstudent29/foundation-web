@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="l" format="2">
+  <advance width="240"/>
+  <unicode hex="006C"/>
+  <anchor x="120" y="0" name="bottom"/>
+  <anchor x="120" y="400" name="center"/>
+  <anchor x="120" y="706" name="top"/>
+  <anchor x="220" y="706" name="topright"/>
+  <outline>
+    <contour>
+      <point x="40" y="0" type="line"/>
+      <point x="200" y="0" type="line"/>
+      <point x="200" y="706" type="line"/>
+      <point x="40" y="706" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>n</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>n</string>
+    </dict>
+  </lib>
+</glyph>

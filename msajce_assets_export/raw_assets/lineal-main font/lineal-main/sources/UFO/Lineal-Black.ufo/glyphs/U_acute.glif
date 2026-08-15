@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Uacute" format="2">
+  <advance width="565"/>
+  <unicode hex="00DA"/>
+  <note>
+Uacute
+</note>
+  <outline>
+    <component base="U"/>
+    <component base="acutecomb.case" xOffset="105" yOffset="193"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-11 16:15:26 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>U</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>U</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="I" format="2">
+  <advance width="240"/>
+  <unicode hex="0049"/>
+  <note>
+I
+</note>
+  <anchor x="120" y="0" name="bottom"/>
+  <anchor x="140" y="0" name="ogonek"/>
+  <anchor x="121" y="706" name="top"/>
+  <anchor x="10" y="706" name="topleft"/>
+  <outline>
+    <contour>
+      <point x="100" y="0" type="line"/>
+      <point x="140" y="0" type="line"/>
+      <point x="140" y="706" type="line"/>
+      <point x="100" y="706" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>H</string>
+    </dict>
+  </lib>
+</glyph>

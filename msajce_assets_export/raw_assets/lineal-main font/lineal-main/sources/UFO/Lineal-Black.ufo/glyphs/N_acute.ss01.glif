@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Nacute.ss01" format="2">
+  <advance width="548"/>
+  <outline>
+    <component base="N.ss01"/>
+    <component base="acutecomb.case" xOffset="95" yOffset="193"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 20:15:48 +0000</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="exclam" format="2">
+  <advance width="290"/>
+  <unicode hex="0021"/>
+  <note>
+exclam
+</note>
+  <outline>
+    <contour>
+      <point x="104" y="257" type="line"/>
+      <point x="186" y="257" type="line"/>
+      <point x="250" y="706" type="line"/>
+      <point x="40" y="706" type="line"/>
+    </contour>
+    <component base="period" xOffset="16" identifier="CD735539"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:38:01 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>I</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>I</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>CD735539</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

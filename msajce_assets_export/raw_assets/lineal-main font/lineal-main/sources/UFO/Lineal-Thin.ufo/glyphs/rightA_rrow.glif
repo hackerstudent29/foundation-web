@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="rightArrow" format="2">
+  <advance width="765"/>
+  <unicode hex="2192"/>
+  <outline>
+    <contour>
+      <point x="507" y="267" type="line"/>
+      <point x="750" y="353" type="line"/>
+      <point x="507" y="439" type="line"/>
+      <point x="507" y="369" type="line"/>
+      <point x="40" y="393" type="line"/>
+      <point x="40" y="313" type="line"/>
+      <point x="507" y="337" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+    </dict>
+  </lib>
+</glyph>

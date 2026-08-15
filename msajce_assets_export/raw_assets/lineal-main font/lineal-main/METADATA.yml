@@ -1,0 +1,18 @@
+---
+unified font repository version: "0.2"
+unified font repository url: https://github.com/raphaelbastide/Unified-Font-Repository/
+typeface family:
+  name: Lineal
+  tags:
+  - sans serif
+  - geometric
+  - modular
+  project url: https://gitlab.com/velvetyne/lineal
+  project status: published
+  tools:
+  - Fontforge
+  - Glyphs
+  similar fonts: Grotesk, Futura, Gulax
+  sample text:
+  - en_us: Sphinx of black quartz, judge my vow.
+...

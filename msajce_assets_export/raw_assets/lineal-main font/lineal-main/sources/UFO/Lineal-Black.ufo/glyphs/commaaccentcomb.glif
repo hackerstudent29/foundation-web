@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="commaaccentcomb" format="2">
+  <advance width="162"/>
+  <unicode hex="0326"/>
+  <anchor x="81" y="0" name="_bottom"/>
+  <anchor x="81" y="-275" name="bottom"/>
+  <outline>
+    <contour>
+      <point x="20" y="-275" type="line"/>
+      <point x="118" y="-275" type="line"/>
+      <point x="142" y="-60" type="line"/>
+      <point x="20" y="-60" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>public.markColor</key>
+      <string>0.99,0.62,0.11,1</string>
+    </dict>
+  </lib>
+</glyph>

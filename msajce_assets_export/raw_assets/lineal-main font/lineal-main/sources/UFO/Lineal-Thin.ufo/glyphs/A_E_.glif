@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="AE" format="2">
+  <advance width="696"/>
+  <unicode hex="00C6"/>
+  <note>
+AE
+</note>
+  <outline>
+    <contour>
+      <point x="30" y="0" type="line"/>
+      <point x="72" y="0" type="line"/>
+      <point x="416" y="702" type="line"/>
+      <point x="416" y="706" type="line"/>
+      <point x="375" y="706" type="line"/>
+    </contour>
+    <contour>
+      <point x="171" y="255" type="line"/>
+      <point x="409" y="255" type="line"/>
+      <point x="409" y="295" type="line"/>
+      <point x="183" y="295" type="line"/>
+    </contour>
+    <component base="E" xOffset="286" identifier="2D1E812B"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>A</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>E</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>2D1E812B</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

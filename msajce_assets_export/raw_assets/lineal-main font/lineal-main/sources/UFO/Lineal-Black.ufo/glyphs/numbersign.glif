@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="numbersign" format="2">
+  <advance width="642"/>
+  <unicode hex="0023"/>
+  <note>
+numbersign
+</note>
+  <outline>
+    <contour>
+      <point x="324" y="-1" type="line"/>
+      <point x="457" y="-1" type="line"/>
+      <point x="518" y="706" type="line"/>
+      <point x="385" y="706" type="line"/>
+    </contour>
+    <contour>
+      <point x="20" y="167" type="line"/>
+      <point x="622" y="167" type="line"/>
+      <point x="622" y="300" type="line"/>
+      <point x="20" y="300" type="line"/>
+    </contour>
+    <contour>
+      <point x="115" y="-1" type="line"/>
+      <point x="248" y="-1" type="line"/>
+      <point x="309" y="706" type="line"/>
+      <point x="176" y="706" type="line"/>
+    </contour>
+    <contour>
+      <point x="20" y="420" type="line"/>
+      <point x="622" y="420" type="line"/>
+      <point x="622" y="553" type="line"/>
+      <point x="20" y="553" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+    </dict>
+  </lib>
+</glyph>

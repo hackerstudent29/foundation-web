@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="gravecomb.case" format="2">
+  <advance width="318"/>
+  <outline>
+    <component base="acutecomb.case" xScale="-1" xOffset="318"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-07-08 14:45:32 +0000</string>
+    </dict>
+  </lib>
+</glyph>

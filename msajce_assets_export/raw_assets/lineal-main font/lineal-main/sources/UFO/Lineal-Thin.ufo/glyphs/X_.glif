@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="X" format="2">
+  <advance width="695"/>
+  <unicode hex="0058"/>
+  <note>
+X
+</note>
+  <guideline x="10" y="660" angle="0"/>
+  <outline>
+    <contour>
+      <point x="12" y="-19" type="line"/>
+      <point x="685" y="673" type="line"/>
+      <point x="685" y="724" type="line"/>
+      <point x="683" y="725" type="line"/>
+      <point x="10" y="33" type="line"/>
+      <point x="10" y="-18" type="line"/>
+    </contour>
+    <contour>
+      <point x="683" y="-19" type="line"/>
+      <point x="685" y="-18" type="line"/>
+      <point x="685" y="33" type="line"/>
+      <point x="12" y="725" type="line"/>
+      <point x="10" y="724" type="line"/>
+      <point x="10" y="673" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-13 14:35:10 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>=|K</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>K</string>
+    </dict>
+  </lib>
+</glyph>

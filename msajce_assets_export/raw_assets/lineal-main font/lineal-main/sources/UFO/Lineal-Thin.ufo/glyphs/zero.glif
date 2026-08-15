@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="zero" format="2">
+  <advance width="827"/>
+  <unicode hex="0030"/>
+  <note>
+zero
+</note>
+  <outline>
+    <component base="O"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 10:39:28 +0000</string>
+    </dict>
+  </lib>
+</glyph>

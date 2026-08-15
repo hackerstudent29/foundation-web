@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="caroncomb.case" format="2">
+  <advance width="364"/>
+  <anchor x="182" y="513" name="_top"/>
+  <anchor x="182" y="742" name="top"/>
+  <outline>
+    <contour>
+      <point x="182" y="543" type="line"/>
+      <point x="330" y="586" type="line"/>
+      <point x="306" y="689" type="line"/>
+      <point x="182" y="664" type="line"/>
+      <point x="58" y="689" type="line"/>
+      <point x="34" y="586" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="IJ" format="2">
+  <advance width="505"/>
+  <unicode hex="0132"/>
+  <guideline x="36" y="351" angle="90"/>
+  <anchor x="286" y="0" name="bottom"/>
+  <anchor x="425" y="706" name="top"/>
+  <outline>
+    <contour>
+      <point x="36" y="370" type="line"/>
+      <point x="194" y="370" type="line"/>
+      <point x="194" y="706" type="line"/>
+      <point x="36" y="706" type="line"/>
+    </contour>
+    <component base="J" xOffset="1"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>U</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>U</string>
+    </dict>
+  </lib>
+</glyph>

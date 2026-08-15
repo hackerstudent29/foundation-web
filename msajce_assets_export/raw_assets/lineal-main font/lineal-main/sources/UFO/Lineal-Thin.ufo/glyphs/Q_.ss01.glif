@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Q.ss01" format="2">
+  <advance width="563"/>
+  <outline>
+    <contour>
+      <point x="514" y="-18" type="line"/>
+      <point x="515" y="-17" type="line"/>
+      <point x="515" y="35" type="line"/>
+      <point x="268" y="309" type="line"/>
+      <point x="267" y="308" type="line"/>
+      <point x="267" y="255" type="line"/>
+    </contour>
+    <component base="zero.ss01"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 20:00:13 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>O</string>
+    </dict>
+  </lib>
+</glyph>

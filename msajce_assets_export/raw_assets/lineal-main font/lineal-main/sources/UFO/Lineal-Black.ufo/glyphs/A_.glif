@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="A" format="2">
+  <advance width="690"/>
+  <unicode hex="0041"/>
+  <note>
+A
+</note>
+  <anchor x="345" y="0" name="bottom"/>
+  <anchor x="680" y="0" name="ogonek"/>
+  <anchor x="345" y="706" name="top"/>
+  <outline>
+    <contour>
+      <point x="10" y="0" type="line"/>
+      <point x="181" y="0" type="line"/>
+      <point x="345" y="399" type="line"/>
+      <point x="511" y="0" type="line"/>
+      <point x="680" y="0" type="line"/>
+      <point x="346" y="749" type="line"/>
+      <point x="344" y="749" type="line"/>
+    </contour>
+    <contour>
+      <point x="203" y="97" type="line"/>
+      <point x="488" y="97" type="line"/>
+      <point x="438" y="247" type="line"/>
+      <point x="253" y="247" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-13 13:48:03 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>V</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>V</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="braceright" format="2">
+  <advance width="389"/>
+  <unicode hex="007D"/>
+  <outline>
+    <component base="braceleft" xScale="-1" xOffset="389" identifier="B618905E"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 11:09:29 +0000</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>B618905E</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

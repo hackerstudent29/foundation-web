@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seven.ss01" format="2">
+  <advance width="425"/>
+  <outline>
+    <contour>
+      <point x="58" y="0" type="line"/>
+      <point x="225" y="0" type="line"/>
+      <point x="415" y="706" type="line"/>
+      <point x="10" y="706" type="line"/>
+      <point x="10" y="546" type="line"/>
+      <point x="208" y="546" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>V</string>
+    </dict>
+  </lib>
+</glyph>

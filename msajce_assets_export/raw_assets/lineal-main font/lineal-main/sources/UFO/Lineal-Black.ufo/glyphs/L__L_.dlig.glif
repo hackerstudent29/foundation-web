@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="L_L.dlig" format="2">
+  <advance width="573"/>
+  <outline>
+    <contour>
+      <point x="40" y="0" type="line"/>
+      <point x="453" y="0" type="line"/>
+      <point x="453" y="160" type="line"/>
+      <point x="200" y="160" type="line"/>
+      <point x="200" y="707" type="line"/>
+      <point x="40" y="707" type="line"/>
+    </contour>
+    <contour>
+      <point x="271" y="232" type="line"/>
+      <point x="553" y="232" type="line"/>
+      <point x="553" y="392" type="line"/>
+      <point x="431" y="392" type="line"/>
+      <point x="431" y="670" type="line"/>
+      <point x="271" y="670" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>L</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>L</string>
+    </dict>
+  </lib>
+</glyph>

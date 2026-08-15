@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="leftArrow" format="2">
+  <advance width="765"/>
+  <unicode hex="2190"/>
+  <outline>
+    <component base="rightArrow" xScale="-1" xOffset="765" identifier="EB8AEAB2"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-07 11:27:53 +0000</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>EB8AEAB2</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

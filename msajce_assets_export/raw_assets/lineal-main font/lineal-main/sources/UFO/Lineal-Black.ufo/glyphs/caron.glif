@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="caron" format="2">
+  <advance width="324"/>
+  <unicode hex="02C7"/>
+  <outline>
+    <component base="caroncomb" identifier="7D47C60A"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-07-08 14:45:32 +0000</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>7D47C60A</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

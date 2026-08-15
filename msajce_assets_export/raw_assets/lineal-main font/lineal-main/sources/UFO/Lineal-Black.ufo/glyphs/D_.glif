@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="D" format="2">
+  <advance width="582"/>
+  <unicode hex="0044"/>
+  <note>
+D
+</note>
+  <anchor x="206" y="0" name="bottom"/>
+  <anchor x="291" y="353" name="center"/>
+  <anchor x="206" y="707" name="top"/>
+  <outline>
+    <contour>
+      <point x="40" y="0" type="line"/>
+      <point x="206" y="0" type="line" smooth="yes"/>
+      <point x="405" y="0"/>
+      <point x="557" y="154"/>
+      <point x="557" y="354" type="curve" smooth="yes"/>
+      <point x="557" y="553"/>
+      <point x="405" y="707"/>
+      <point x="206" y="707" type="curve" smooth="yes"/>
+      <point x="40" y="707" type="line"/>
+    </contour>
+    <contour>
+      <point x="206" y="167" type="curve"/>
+      <point x="206" y="540" type="line"/>
+      <point x="310" y="539"/>
+      <point x="390" y="460"/>
+      <point x="390" y="354" type="curve" smooth="yes"/>
+      <point x="390" y="249"/>
+      <point x="310" y="168"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>O</string>
+    </dict>
+  </lib>
+</glyph>

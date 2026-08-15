@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="acutecomb" format="2">
+  <advance width="306"/>
+  <unicode hex="0301"/>
+  <anchor x="152" y="513" name="_top"/>
+  <anchor x="152" y="722" name="top"/>
+  <outline>
+    <contour>
+      <point x="36" y="544" type="line"/>
+      <point x="294" y="593" type="line"/>
+      <point x="264" y="722" type="line"/>
+      <point x="10" y="640" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>public.markColor</key>
+      <string>0.99,0.62,0.11,1</string>
+    </dict>
+  </lib>
+</glyph>

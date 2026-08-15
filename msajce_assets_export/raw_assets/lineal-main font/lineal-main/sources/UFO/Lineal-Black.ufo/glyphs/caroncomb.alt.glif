@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="caroncomb.alt" format="2">
+  <advance width="195"/>
+  <anchor x="0" y="800" name="_topright"/>
+  <outline>
+    <contour>
+      <point x="20" y="632" type="line"/>
+      <point x="106" y="623" type="line"/>
+      <point x="175" y="821" type="line"/>
+      <point x="52" y="838" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 20:27:57 +0000</string>
+      <key>public.markColor</key>
+      <string>0.99,0.62,0.11,1</string>
+    </dict>
+  </lib>
+</glyph>

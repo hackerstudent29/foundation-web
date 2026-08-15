@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="oslash" format="2">
+  <advance width="629"/>
+  <unicode hex="00F8"/>
+  <outline>
+    <component base="o"/>
+    <contour>
+      <point x="98" y="10" type="line"/>
+      <point x="564" y="476" type="line"/>
+      <point x="536" y="503" type="line"/>
+      <point x="70" y="37" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:29:59 +0000</string>
+    </dict>
+  </lib>
+</glyph>

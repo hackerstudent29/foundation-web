@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="four.ss01" format="2">
+  <advance width="543"/>
+  <outline>
+    <contour>
+      <point x="403" y="0" type="line"/>
+      <point x="443" y="0" type="line"/>
+      <point x="443" y="513" type="line"/>
+      <point x="403" y="513" type="line"/>
+      <point x="403" y="196" type="line"/>
+      <point x="140" y="196" type="line"/>
+      <point x="140" y="706" type="line"/>
+      <point x="100" y="706" type="line"/>
+      <point x="100" y="156" type="line"/>
+      <point x="403" y="156" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>H</string>
+    </dict>
+  </lib>
+</glyph>

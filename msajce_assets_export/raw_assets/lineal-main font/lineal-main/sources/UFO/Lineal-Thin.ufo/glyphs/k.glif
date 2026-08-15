@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="k" format="2">
+  <advance width="548"/>
+  <unicode hex="006B"/>
+  <note>
+k
+</note>
+  <guideline x="498" y="-10" angle="0"/>
+  <anchor x="274" y="0" name="bottom"/>
+  <anchor x="110" y="706" name="top"/>
+  <outline>
+    <contour>
+      <point x="495" y="-14" type="line"/>
+      <point x="498" y="-12" type="line"/>
+      <point x="498" y="33" type="line"/>
+      <point x="130" y="256" type="line"/>
+      <point x="498" y="478" type="line"/>
+      <point x="498" y="523" type="line"/>
+      <point x="495" y="525" type="line"/>
+      <point x="106" y="292" type="line"/>
+      <point x="106" y="219" type="line"/>
+    </contour>
+    <contour>
+      <point x="90" y="0" type="line"/>
+      <point x="130" y="0" type="line"/>
+      <point x="130" y="706" type="line"/>
+      <point x="90" y="706" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>n</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>x</string>
+    </dict>
+  </lib>
+</glyph>

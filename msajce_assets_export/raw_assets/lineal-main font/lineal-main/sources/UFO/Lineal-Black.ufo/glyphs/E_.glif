@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="E" format="2">
+  <advance width="360"/>
+  <unicode hex="0045"/>
+  <note>
+E
+</note>
+  <guideline x="185" y="706" angle="90"/>
+  <guideline x="265" y="446" angle="180"/>
+  <anchor x="185" y="0" name="bottom"/>
+  <anchor x="330" y="0" name="ogonek"/>
+  <anchor x="185" y="706" name="top"/>
+  <anchor x="20" y="706" name="topleft"/>
+  <outline>
+    <contour>
+      <point x="40" y="0" type="line"/>
+      <point x="330" y="0" type="line"/>
+      <point x="330" y="160" type="line"/>
+      <point x="200" y="160" type="line"/>
+      <point x="200" y="286" type="line"/>
+      <point x="330" y="286" type="line"/>
+      <point x="330" y="446" type="line"/>
+      <point x="200" y="446" type="line"/>
+      <point x="200" y="546" type="line"/>
+      <point x="330" y="546" type="line"/>
+      <point x="330" y="706" type="line"/>
+      <point x="40" y="706" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:53:02 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>H</string>
+    </dict>
+  </lib>
+</glyph>

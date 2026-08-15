@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Eth" format="2">
+  <advance width="593"/>
+  <unicode hex="00D0"/>
+  <outline>
+    <contour>
+      <point x="1" y="292" type="line"/>
+      <point x="282" y="292" type="line"/>
+      <point x="282" y="416" type="line"/>
+      <point x="1" y="416" type="line"/>
+    </contour>
+    <component base="D" xOffset="11" identifier="76013AC5"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>O</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>76013AC5</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

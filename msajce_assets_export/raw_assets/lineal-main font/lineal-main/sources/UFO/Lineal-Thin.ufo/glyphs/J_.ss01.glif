@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="J.ss01" format="2">
+  <advance width="453"/>
+  <outline>
+    <contour>
+      <point x="196" y="0" type="curve" smooth="yes"/>
+      <point x="288" y="0"/>
+      <point x="363" y="77"/>
+      <point x="363" y="168" type="curve" smooth="yes"/>
+      <point x="363" y="706" type="line"/>
+      <point x="322" y="706" type="line"/>
+      <point x="322" y="167" type="line" smooth="yes"/>
+      <point x="322" y="97"/>
+      <point x="267" y="41"/>
+      <point x="197" y="41" type="curve" smooth="yes"/>
+      <point x="126" y="41"/>
+      <point x="70" y="98"/>
+      <point x="70" y="167" type="curve" smooth="yes"/>
+      <point x="70" y="217" type="line"/>
+      <point x="30" y="217" type="line"/>
+      <point x="30" y="168" type="line" smooth="yes"/>
+      <point x="30" y="78"/>
+      <point x="103" y="0"/>
+    </contour>
+    <contour>
+      <point x="115" y="666" type="line"/>
+      <point x="350" y="666" type="line"/>
+      <point x="350" y="706" type="line"/>
+      <point x="115" y="706" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>U</string>
+    </dict>
+  </lib>
+</glyph>

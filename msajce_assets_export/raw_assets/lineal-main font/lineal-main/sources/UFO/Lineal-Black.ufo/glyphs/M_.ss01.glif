@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="M.ss01" format="2">
+  <advance width="668"/>
+  <anchor x="334" y="0" name="bottom"/>
+  <anchor x="334" y="706" name="top"/>
+  <outline>
+    <contour>
+      <point x="40" y="0" type="line"/>
+      <point x="196" y="0" type="line"/>
+      <point x="196" y="467" type="line"/>
+      <point x="331" y="212" type="line"/>
+      <point x="337" y="212" type="line"/>
+      <point x="472" y="467" type="line"/>
+      <point x="472" y="0" type="line"/>
+      <point x="628" y="0" type="line"/>
+      <point x="628" y="707" type="line"/>
+      <point x="439" y="707" type="line"/>
+      <point x="334" y="506" type="line"/>
+      <point x="229" y="707" type="line"/>
+      <point x="40" y="707" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>H</string>
+    </dict>
+  </lib>
+</glyph>

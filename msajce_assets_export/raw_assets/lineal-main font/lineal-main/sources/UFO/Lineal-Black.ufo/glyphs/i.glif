@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="i" format="2">
+  <advance width="224"/>
+  <unicode hex="0069"/>
+  <anchor x="48" y="0" name="bottom"/>
+  <outline>
+    <component base="idotless"/>
+    <component base="dotaccentcomb" xOffset="-41" yOffset="-50"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-13 15:07:53 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>=n-30</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>=n-30</string>
+    </dict>
+  </lib>
+</glyph>

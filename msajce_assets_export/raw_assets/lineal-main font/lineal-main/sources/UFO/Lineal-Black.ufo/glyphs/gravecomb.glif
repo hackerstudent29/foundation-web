@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="gravecomb" format="2">
+  <advance width="306"/>
+  <unicode hex="0300"/>
+  <anchor x="154" y="513" name="_top"/>
+  <anchor x="154" y="722" name="top"/>
+  <outline>
+    <component base="acutecomb" xScale="-1" xOffset="306" identifier="57935B82"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-07 09:56:26 +0000</string>
+      <key>public.markColor</key>
+      <string>0.99,0.62,0.11,1</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>57935B82</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

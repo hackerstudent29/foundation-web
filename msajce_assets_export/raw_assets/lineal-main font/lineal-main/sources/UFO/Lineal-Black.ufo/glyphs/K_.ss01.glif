@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="K.ss01" format="2">
+  <advance width="537"/>
+  <anchor x="264" y="0" name="bottom"/>
+  <anchor x="264" y="706" name="top"/>
+  <outline>
+    <contour>
+      <point x="141" y="255" type="line"/>
+      <point x="490" y="531" type="line"/>
+      <point x="490" y="735" type="line"/>
+      <point x="489" y="736" type="line"/>
+      <point x="141" y="449" type="line"/>
+    </contour>
+    <contour>
+      <point x="40" y="0" type="line"/>
+      <point x="200" y="0" type="line"/>
+      <point x="200" y="706" type="line"/>
+      <point x="40" y="706" type="line"/>
+    </contour>
+    <contour>
+      <point x="336" y="0" type="line"/>
+      <point x="502" y="0" type="line"/>
+      <point x="387" y="490" type="line"/>
+      <point x="257" y="370" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-13 14:44:25 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>=K+5</string>
+    </dict>
+  </lib>
+</glyph>

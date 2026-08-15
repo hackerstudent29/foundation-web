@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="guilsinglleft" format="2">
+  <advance width="313"/>
+  <unicode hex="2039"/>
+  <outline>
+    <contour>
+      <point x="138" y="-38" type="line"/>
+      <point x="293" y="2" type="line"/>
+      <point x="174" y="274" type="line"/>
+      <point x="293" y="546" type="line"/>
+      <point x="138" y="586" type="line"/>
+      <point x="20" y="274" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>guillemotleft</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>=|guillemotleft</string>
+    </dict>
+  </lib>
+</glyph>

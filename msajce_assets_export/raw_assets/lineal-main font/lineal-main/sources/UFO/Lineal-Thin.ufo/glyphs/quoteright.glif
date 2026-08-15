@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="quoteright" format="2">
+  <advance width="157"/>
+  <unicode hex="2019"/>
+  <note>
+quoteright
+</note>
+  <outline>
+    <component base="comma" yOffset="597" identifier="61985612"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-13 13:51:11 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>comma</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>comma</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>61985612</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

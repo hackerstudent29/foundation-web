@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="guillemotleft.case" format="2">
+  <advance width="583"/>
+  <outline>
+    <component base="guillemotleft" yOffset="86"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-07-10 07:05:04 +0000</string>
+    </dict>
+  </lib>
+</glyph>

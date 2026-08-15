@@ -1,0 +1,771 @@
+@import "tailwindcss";
+@import "../../assets/css/index.css";
+
+/* ── Hide all scrollbars globally (scroll still works) ── */
+html, body, * {
+    scrollbar-width: none !important;       /* Firefox */
+    -ms-overflow-style: none !important;    /* IE / Edge legacy */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    display: none !important;              /* Chrome, Safari, Opera */
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* ── Lineal Custom Font Family ── */
+@font-face {
+    font-family: 'Lineal';
+    src: url('/fonts/Lineal-Regular.woff2') format('woff2'),
+         url('/fonts/Lineal-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lineal';
+    src: url('/fonts/Lineal-Medium.woff2') format('woff2'),
+         url('/fonts/Lineal-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lineal';
+    src: url('/fonts/Lineal-Bold.woff2') format('woff2'),
+         url('/fonts/Lineal-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lineal';
+    src: url('/fonts/Lineal-Black.woff2') format('woff2'),
+         url('/fonts/Lineal-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ==========================================================================
+   MSAJCE Web Design System (UAL Bold Grid + Apple Dropdown Navigation)
+   ========================================================================== */
+
+/* Font Declarations */
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/Switzer-Regular.woff2') format('woff2'),
+         url('/fonts/Switzer-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/Switzer-Medium.woff2') format('woff2'),
+         url('/fonts/Switzer-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/Switzer-Semibold.woff2') format('woff2'),
+         url('/fonts/Switzer-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/Switzer-Bold.woff2') format('woff2'),
+         url('/fonts/Switzer-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/Switzer-Extrabold.woff2') format('woff2'),
+         url('/fonts/Switzer-Extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/Switzer-Black.woff2') format('woff2'),
+         url('/fonts/Switzer-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karrik';
+    src: url('/fonts/Karrik-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lineal';
+    src: url('/fonts/LinealVF.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Core CSS Variables */
+:root {
+    --primary-blue: #005DA6;
+    --white: #FFFFFF;
+    --dark-gray-1: #616161;
+    --dark-gray-2: #595959;
+    --black: #000000;
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.25s ease;
+    --font-sans: 'Switzer', sans-serif;
+    --font-heading: 'Karrik', serif;
+    --font-accent: 'Lineal', sans-serif;
+}
+
+/* Base Body defaults (Dark Theme) */
+body {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    --border-color: rgba(255, 255, 255, 0.15) !important;
+    --card-bg: var(--black) !important;
+    --card-hover-bg: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Light Theme Overrides */
+body.light-theme {
+    background-color: var(--white) !important;
+    color: var(--black) !important;
+    --border-color: rgba(0, 0, 0, 0.15) !important;
+    --card-bg: var(--white) !important;
+    --card-hover-bg: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Sync text and heading elements (only base text, visual cells have separate overrides) */
+body.light-theme h1:not(.event-card-text),
+body.light-theme h2:not(.event-card-text),
+body.light-theme h3:not(.event-card-text),
+body.light-theme h4:not(.event-card-text),
+body.light-theme p:not(.visual-cell p):not(.dept-card p):not(.event-card-text),
+body.light-theme span:not(.visual-cell span):not(.dept-code):not(.event-card-text):not(.hero-link-item span),
+body.light-theme div:not(.visual-cell div):not(.dept-card div):not(.event-card-text),
+body.light-theme a:not(.visual-cell a):not(.dept-link):not(.event-card-text):not(.hero-link-item) {
+    color: var(--black) !important;
+}
+
+/* Event card overlay text always white — beats light-theme override */
+body .event-card-text,
+body .event-card-text h3,
+body .event-card-text h4,
+body .event-card-text p,
+body .event-card-text span,
+body.light-theme .event-card-text,
+body.light-theme .event-card-text h3,
+body.light-theme .event-card-text h4,
+body.light-theme .event-card-text p,
+body.light-theme .event-card-text span {
+    color: #ffffff !important;
+}
+
+/* Hero nav links — black at rest, blue on hover in light theme */
+body.light-theme .hero-link-item {
+    color: var(--black);
+}
+body.light-theme .hero-link-item:hover,
+body.light-theme .hero-link-item:hover span,
+body.light-theme .hero-link-item:hover .arrow,
+body.light-theme .hero-link-item:hover > * {
+    color: #005DA6 !important;
+}
+
+/* Let white elements stay clean white, blue stay blue */
+body.light-theme .text-white,
+body.light-theme .text-white h1,
+body.light-theme .text-white h2,
+body.light-theme .text-white h3,
+body.light-theme .text-white h4,
+body.light-theme .text-white p,
+body.light-theme .text-white span,
+body.light-theme .text-white div,
+body.light-theme .text-white a {
+    color: var(--white) !important;
+}
+
+body.light-theme .bg-blue,
+body.light-theme .bg-blue h1,
+body.light-theme .bg-blue h2,
+body.light-theme .bg-blue h3,
+body.light-theme .bg-blue h4,
+body.light-theme .bg-blue p,
+body.light-theme .bg-blue span,
+body.light-theme .bg-blue div,
+body.light-theme .bg-blue a {
+    color: var(--white) !important;
+}
+
+/* Swapping visual card themes: Black goes to White, White goes to Black */
+body.light-theme .visual-cell.bg-black {
+    background-color: var(--white) !important;
+    color: var(--black) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.light-theme .visual-cell.bg-black h1,
+body.light-theme .visual-cell.bg-black h2,
+body.light-theme .visual-cell.bg-black h3,
+body.light-theme .visual-cell.bg-black h4,
+body.light-theme .visual-cell.bg-black p,
+body.light-theme .visual-cell.bg-black span,
+body.light-theme .visual-cell.bg-black div,
+body.light-theme .visual-cell.bg-black a {
+    color: var(--black) !important;
+}
+
+/* Invert the transparent logo emblem in light theme visual cell swap */
+body.light-theme .visual-cell.bg-black.logo-cell {
+    background-color: var(--white) !important;
+}
+
+body.light-theme .visual-cell.bg-black.logo-cell img {
+    filter: invert(1) !important;
+}
+
+body.light-theme .visual-cell.bg-white {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.light-theme .visual-cell.bg-white h1,
+body.light-theme .visual-cell.bg-white h2,
+body.light-theme .visual-cell.bg-white h3,
+body.light-theme .visual-cell.bg-white h4,
+body.light-theme .visual-cell.bg-white p,
+body.light-theme .visual-cell.bg-white span,
+body.light-theme .visual-cell.bg-white div,
+body.light-theme .visual-cell.bg-white a {
+    color: var(--white) !important;
+}
+
+body.light-theme .hero-text-block,
+body.light-theme .hero-link-item,
+body.light-theme .visual-cell,
+body.light-theme .editorial-grid-section,
+body.light-theme .dept-card,
+body.light-theme .info-image-block,
+body.light-theme .info-text-block,
+body.light-theme .main-footer {
+    border-color: var(--border-color) !important;
+}
+
+/* Card overrides for Light Theme */
+body.light-theme .stats-card,
+body.light-theme .partner-logo-box,
+body.light-theme .main-footer {
+    background-color: var(--white) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.light-theme .stats-card span {
+    color: var(--black) !important;
+}
+
+body.light-theme .stats-card .stats-number {
+    color: var(--primary-blue) !important;
+}
+
+body.light-theme .dept-card {
+    background-color: var(--white) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.light-theme .dept-card.bg-blue,
+body.light-theme .dept-card.bg-black,
+body.light-theme .dept-card.bg-gray {
+    background-color: inherit !important;
+}
+
+body.light-theme .dept-card.bg-white h3,
+body.light-theme .dept-card.bg-white p {
+    color: var(--black) !important;
+}
+
+body.light-theme .dept-card.bg-white p {
+    color: var(--dark-gray-1) !important;
+}
+
+/* Reset specific text values inside light cards */
+body.light-theme .visual-cell.bg-white h2,
+body.light-theme .visual-cell.bg-white span {
+    color: var(--black) !important;
+}
+
+body.light-theme .visual-cell p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.light-theme .visual-cell.bg-white p {
+    color: var(--dark-gray-1) !important;
+}
+
+/* Base header glassmorphism defaults */
+#header.main-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    background-color: rgba(0, 0, 0, 0.65) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    transition: background-color 0.35s ease, border-color 0.35s ease, opacity 0.35s ease !important;
+}
+
+#header.main-header.menu-open {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    border-bottom: none !important;
+}
+
+body.light-theme #header.main-header {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-theme #header.main-header.menu-open {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    border-bottom: none !important;
+}
+
+/* Ensure CSS variables also match */
+:root {
+    --header-bg: rgba(0, 0, 0, 0.4) !important;
+}
+
+body.light-theme {
+    --header-bg: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Glass backdrop styling on the dropdown overlay */
+.dropdown-overlay {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+}
+
+body.light-theme .dropdown-overlay {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+}
+
+/* Blur the background page content when dropdown is active */
+body.dropdown-open #main-content {
+    filter: blur(12px);
+    pointer-events: none;
+    transition: filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#main-content {
+    transition: filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Force navbar logo visibility: original colors on light, clean white on black */
+body.light-theme .header-logo {
+    filter: none !important;
+}
+
+body:not(.light-theme) .header-logo {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Ensure smooth height and opacity transition rules for overlay panels */
+.dropdown-overlay {
+    height: 0px !important;
+    max-height: 0px !important;
+    opacity: 0 !important;
+    pointer-events: none;
+    overflow: hidden;
+    transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1), max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, background-color 0.35s ease !important;
+}
+
+.dropdown-overlay.active {
+    height: 250px !important;
+    max-height: 250px !important;
+    opacity: 1 !important;
+    pointer-events: auto;
+}
+
+.dropdown-pane-container {
+    padding: 16px 40px !important;
+    margin-top: 12px !important;
+}
+
+.dropdown-pane {
+    display: block !important;
+    opacity: 0 !important;
+    transform: translateY(-16px) !important;
+    transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    pointer-events: none;
+}
+
+.dropdown-pane.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto;
+}
+
+body.light-theme .nav-trigger {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+body.light-theme .nav-trigger:hover, 
+body.light-theme .nav-trigger.active {
+    color: var(--primary-blue) !important;
+}
+
+body.light-theme #header.main-header.menu-open {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    border-bottom: none !important;
+}
+
+body.light-theme .dropdown-overlay {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light-theme .dropdown-col h3 {
+    color: var(--dark-gray-2) !important;
+}
+
+body.light-theme #header .dropdown-col ul li a {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+body.light-theme #header .dropdown-col ul li a:hover {
+    color: var(--primary-blue) !important;
+}
+
+body.light-theme #header .arrow-link {
+    color: var(--primary-blue) !important;
+}
+
+body.light-theme #header .arrow-link:hover {
+    color: var(--black) !important;
+}
+
+body.light-theme .dropdown-highlight {
+    background-color: rgba(0, 0, 0, 0.02) !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-theme .dropdown-highlight h4 {
+    color: var(--black) !important;
+}
+
+body.light-theme .dropdown-highlight p {
+    color: var(--dark-gray-1) !important;
+}
+
+/* Bold Nav Items (Except Logo) */
+#header .nav-trigger,
+#header .nav-list > li > a,
+#header .dropdown-col ul li a,
+#header .dropdown-pane-mobile-inline ul li a {
+    font-weight: 700 !important;
+}
+
+/* Mobile Dropdown Styling */
+@media (max-width: 1024px) {
+    body.light-theme #header .nav-menu {
+        background-color: rgba(255, 255, 255, 0.75) !important;
+        -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+        backdrop-filter: blur(24px) saturate(180%) !important;
+    }
+    
+    body.dark-theme #header .nav-menu {
+        background-color: rgba(22, 22, 23, 0.8) !important;
+        -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+        backdrop-filter: blur(24px) saturate(180%) !important;
+    }
+    
+    #header .nav-menu {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #header .nav-list {
+        flex: 1 0 auto;
+        padding-bottom: 2rem;
+    }
+    
+    #header .dropdown-pane-mobile-inline ul li a {
+        position: relative;
+    }
+
+    #header .dropdown-pane-mobile-inline ul li a:hover {
+        color: var(--primary-blue) !important;
+        opacity: 1 !important;
+    }
+
+    #header .dropdown-pane-mobile-inline ul li a:hover::after {
+        content: " \2192";
+        font-family: inherit;
+        margin-left: 4px;
+        color: var(--primary-blue);
+    }
+}
+
+/* Global Reset & Base */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* Set Karrik font for headings */
+h1, h2, h3, h4, .hero-heading, .stats-number {
+    font-family: var(--font-heading) !important;
+}
+
+/* Set Lineal font for tagline accents */
+.hero-tagline, .dept-code, .cell-tag, .stats-label {
+    font-family: var(--font-accent) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Ensure Switzer is used as the sans-serif font */
+:root {
+    --font-sans: 'Switzer', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* Custom logo sizes & color-invert prevention */
+#header.main-header .logo-link {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+#header.main-header .header-logo {
+    height: 240px !important;
+    max-height: 240px !important;
+    margin-top: -76px !important;
+    margin-bottom: -92px !important;
+    width: auto !important;
+    align-self: center !important;
+    filter: none !important;
+}
+
+body.light-theme #header.main-header .header-logo,
+body:not(.light-theme) #header.main-header .header-logo {
+    filter: none !important;
+}
+
+.footer-logo {
+    height: 320px !important;
+    max-height: 320px !important;
+    margin-top: -110px !important;
+    margin-bottom: -110px !important;
+    width: auto !important;
+    filter: none !important;
+}
+
+body.light-theme .footer-logo,
+body:not(.light-theme) .footer-logo {
+    filter: none !important;
+}
+
+/* Footer text alignment under logo starting edge */
+.footer-brand p {
+    padding-left: 10px !important;
+    margin: 0 !important;
+}
+
+.footer-brand .copyright {
+    padding-left: 10px !important;
+    margin-top: 8px !important;
+}
+
+/* Footer-specific clickable links layout */
+
+.contact-info a {
+    color: inherit !important;
+    text-decoration: none !important;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3) !important;
+    transition: opacity 0.2s ease, border-color 0.2s ease !important;
+}
+
+body:not(.light-theme) .contact-info a {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.4) !important;
+}
+
+.contact-info a:hover {
+    opacity: 0.8 !important;
+    border-bottom-style: solid !important;
+}
+
+/* ── Circular View Transition for Theme Toggle ── */
+::view-transition-image-pair(root) {
+  isolation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  display: block;
+}
+
+/* The new theme page sweeps over the old one using a circular clip path */
+::view-transition-new(root) {
+  animation: 0.45s cubic-bezier(0.25, 1, 0.5, 1) both reveal-circle;
+}
+
+@keyframes reveal-circle {
+  from {
+    clip-path: circle(0px at var(--transition-x) var(--transition-y));
+  }
+  to {
+    clip-path: circle(var(--transition-r) at var(--transition-x) var(--transition-y));
+  }
+}
+
+/* ── Apple-style Theme Toggle Icon Animation ── */
+.theme-toggle-btn {
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    transition: background-color 0.3s ease !important;
+    width: 40px !important;
+    height: 40px !important;
+    color: var(--text-color) !important;
+    outline: none !important;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(120, 120, 120, 0.15) !important;
+}
+
+.theme-toggle-svg {
+    width: 24px !important;
+    height: 24px !important;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transform-origin: center !important;
+}
+
+/* Center circle transitions */
+.theme-center-circle {
+    transition: r 0.4s cubic-bezier(0.16, 1, 0.3, 1), fill 0.4s ease !important;
+    transform-origin: center !important;
+}
+
+/* Rays transition */
+.theme-rays {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transform-origin: center !important;
+}
+
+/* Clip mask transition to cut a crescent moon shape */
+.clip-mask {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transform-origin: center !important;
+}
+
+/* Dark Theme (Moon Mode) - default state */
+body:not(.light-theme) .theme-toggle-svg {
+    transform: rotate(40deg) !important;
+}
+
+body:not(.light-theme) .theme-center-circle {
+    r: 9px !important;
+}
+
+body:not(.light-theme) .theme-rays {
+    opacity: 0 !important;
+    transform: scale(0.6) !important;
+}
+
+body:not(.light-theme) .clip-mask {
+    transform: translate(-7px, 7px) !important;
+}
+
+/* Light Theme (Sun Mode) */
+body.light-theme .theme-toggle-svg {
+    transform: rotate(90deg) !important;
+}
+
+body.light-theme .theme-center-circle {
+    r: 5.5px !important;
+}
+
+body.light-theme .theme-rays {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+body.light-theme .clip-mask {
+    transform: translate(14px, -14px) !important;
+}
+
+/* ── Placement Marquee CSS Animation ── */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 25s linear infinite !important;
+}
+

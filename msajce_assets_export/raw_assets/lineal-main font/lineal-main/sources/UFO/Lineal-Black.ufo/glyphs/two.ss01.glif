@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="two.ss01" format="2">
+  <advance width="557"/>
+  <outline>
+    <component base="five.ss01" yScale="-1" yOffset="707" identifier="80229FAA"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-02-14 14:52:36 +0000</string>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>80229FAA</key>
+        <dict>
+          <key>com.schriftgestaltung.alignment</key>
+          <integer>-1</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

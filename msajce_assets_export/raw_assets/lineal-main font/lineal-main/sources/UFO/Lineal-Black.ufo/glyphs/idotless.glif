@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="idotless" format="2">
+  <advance width="224"/>
+  <unicode hex="0131"/>
+  <anchor x="115" y="0" name="bottom"/>
+  <anchor x="198" y="0" name="ogonek"/>
+  <anchor x="115" y="463" name="top"/>
+  <outline>
+    <contour>
+      <point x="32" y="463" type="line"/>
+      <point x="32" y="0" type="line"/>
+      <point x="192" y="0" type="line"/>
+      <point x="192" y="463" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 20:19:35 +0000</string>
+    </dict>
+  </lib>
+</glyph>

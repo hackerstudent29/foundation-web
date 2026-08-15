@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ij" format="2">
+  <advance width="456"/>
+  <unicode hex="0133"/>
+  <guideline x="94" y="-180" angle="270"/>
+  <outline>
+    <component base="i"/>
+    <component base="j" xOffset="228"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 12:56:16 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>j</string>
+    </dict>
+  </lib>
+</glyph>

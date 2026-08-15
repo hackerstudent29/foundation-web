@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ampersand" format="2">
+  <advance width="452"/>
+  <unicode hex="0026"/>
+  <note>
+ampersand
+</note>
+  <outline>
+    <contour>
+      <point x="232" y="0" type="curve" smooth="yes"/>
+      <point x="398" y="0" type="line"/>
+      <point x="398" y="41" type="line"/>
+      <point x="252" y="41" type="line" smooth="yes"/>
+      <point x="161" y="41"/>
+      <point x="90" y="110"/>
+      <point x="90" y="201" type="curve" smooth="yes"/>
+      <point x="90" y="294"/>
+      <point x="157" y="365"/>
+      <point x="252" y="365" type="curve"/>
+      <point x="262" y="404" type="line"/>
+      <point x="143" y="409"/>
+      <point x="50" y="319"/>
+      <point x="50" y="201" type="curve" smooth="yes"/>
+      <point x="50" y="95"/>
+      <point x="129" y="0"/>
+    </contour>
+    <contour>
+      <point x="309" y="250" type="line"/>
+      <point x="353" y="250" type="line"/>
+      <point x="145" y="666" type="line"/>
+      <point x="398" y="666" type="line"/>
+      <point x="398" y="706" type="line"/>
+      <point x="81" y="706" type="line"/>
+      <point x="82" y="702" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:45:46 +0000</string>
+      <key>com.schriftgestaltung.Glyphs.leftMetricsKey</key>
+      <string>=|three</string>
+      <key>com.schriftgestaltung.Glyphs.rightMetricsKey</key>
+      <string>=|seven</string>
+    </dict>
+  </lib>
+</glyph>

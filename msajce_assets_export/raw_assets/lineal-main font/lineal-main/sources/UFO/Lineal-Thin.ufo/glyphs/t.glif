@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="t" format="2">
+  <advance width="367"/>
+  <unicode hex="0074"/>
+  <anchor x="175" y="0" name="bottom"/>
+  <anchor x="175" y="257" name="center"/>
+  <anchor x="175" y="608" name="top"/>
+  <anchor x="225" y="750" name="topright"/>
+  <outline>
+    <contour>
+      <point x="155" y="-1" type="line"/>
+      <point x="195" y="0" type="line"/>
+      <point x="195" y="473" type="line"/>
+      <point x="337" y="473" type="line"/>
+      <point x="337" y="513" type="line"/>
+      <point x="195" y="513" type="line"/>
+      <point x="195" y="619" type="line"/>
+      <point x="194" y="620" type="line"/>
+      <point x="155" y="583" type="line"/>
+      <point x="155" y="513" type="line"/>
+      <point x="30" y="513" type="line"/>
+      <point x="30" y="473" type="line"/>
+      <point x="155" y="473" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-12 19:26:00 +0000</string>
+    </dict>
+  </lib>
+</glyph>

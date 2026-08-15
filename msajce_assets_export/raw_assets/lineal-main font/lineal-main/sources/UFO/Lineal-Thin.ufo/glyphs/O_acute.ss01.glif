@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Oacute.ss01" format="2">
+  <advance width="597"/>
+  <outline>
+    <component base="O.ss01"/>
+    <component base="acutecomb.case" xOffset="150" yOffset="194"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2023-12-07 09:56:41 +0000</string>
+    </dict>
+  </lib>
+</glyph>
