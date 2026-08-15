@@ -4,18 +4,20 @@ import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export default function ThemeToggle({ className }: { className?: string }) {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "light") {
-      setIsDark(false);
-      document.body.classList.add("light-theme");
-    } else {
+    if (storedTheme === "dark") {
       setIsDark(true);
       document.body.classList.remove("light-theme");
+      document.documentElement.classList.add("dark");
+    } else {
+      setIsDark(false);
+      document.body.classList.add("light-theme");
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
@@ -24,10 +26,12 @@ export default function ThemeToggle({ className }: { className?: string }) {
     const switchTheme = () => {
       if (isDark) {
         body.classList.add("light-theme");
+        document.documentElement.classList.remove("dark");
         localStorage.setItem("theme", "light");
         setIsDark(false);
       } else {
         body.classList.remove("light-theme");
+        document.documentElement.classList.add("dark");
         localStorage.setItem("theme", "dark");
         setIsDark(true);
       }

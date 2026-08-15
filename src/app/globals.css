@@ -1,7 +1,24 @@
 @import "tailwindcss";
-@import "../../assets/css/index.css";
+@custom-variant dark (&:where(.dark, .dark *));
+@import "../styles/index.css";
 
-/* ── Hide all scrollbars globally (scroll still works) ── */
+/* ── Lenis smooth scroll base ── */
+html.lenis, html.lenis body {
+    height: auto;
+}
+html {
+    /* Let Lenis handle momentum; disable native smooth scroll */
+    scroll-behavior: auto !important;
+}
+
+/* ── GPU-accelerated layer for animated elements ── */
+.will-animate {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* â”€â”€ Hide all scrollbars globally (scroll still works) â”€â”€ */
 html, body, * {
     scrollbar-width: none !important;       /* Firefox */
     -ms-overflow-style: none !important;    /* IE / Edge legacy */
@@ -14,7 +31,7 @@ body::-webkit-scrollbar,
     height: 0 !important;
 }
 
-/* ── Lineal Custom Font Family ── */
+/* â”€â”€ Lineal Custom Font Family â”€â”€ */
 @font-face {
     font-family: 'Lineal';
     src: url('/fonts/Lineal-Regular.woff2') format('woff2'),
@@ -171,7 +188,7 @@ body.light-theme a:not(.visual-cell a):not(.dept-link):not(.event-card-text):not
     color: var(--black) !important;
 }
 
-/* Event card overlay text always white — beats light-theme override */
+/* Event card overlay text always white â€” beats light-theme override */
 body .event-card-text,
 body .event-card-text h3,
 body .event-card-text h4,
@@ -185,7 +202,7 @@ body.light-theme .event-card-text span {
     color: #ffffff !important;
 }
 
-/* Hero nav links — black at rest, blue on hover in light theme */
+/* Hero nav links â€” black at rest, blue on hover in light theme */
 body.light-theme .hero-link-item {
     color: var(--black);
 }
@@ -387,14 +404,20 @@ body.light-theme .dropdown-overlay {
     backdrop-filter: blur(24px) saturate(180%) !important;
 }
 
-/* Blur the background page content when dropdown is active */
-body.dropdown-open #main-content {
+/* Prevent scrolling and blur the background page content when dropdown is active */
+body.dropdown-open {
+    overflow: hidden !important;
+}
+
+body.dropdown-open #main-content,
+body.dropdown-open .main-footer {
     filter: blur(12px);
     pointer-events: none;
     transition: filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-#main-content {
+#main-content,
+.main-footer {
     transition: filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -515,7 +538,7 @@ body.light-theme .dropdown-highlight p {
         backdrop-filter: blur(24px) saturate(180%) !important;
     }
     
-    body.dark-theme #header .nav-menu {
+    body:not(.light-theme) #header .nav-menu {
         background-color: rgba(22, 22, 23, 0.8) !important;
         -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
         backdrop-filter: blur(24px) saturate(180%) !important;
@@ -647,7 +670,7 @@ body:not(.light-theme) .contact-info a {
     border-bottom-style: solid !important;
 }
 
-/* ── Circular View Transition for Theme Toggle ── */
+/* â”€â”€ Circular View Transition for Theme Toggle â”€â”€ */
 ::view-transition-image-pair(root) {
   isolation: auto;
 }
@@ -673,7 +696,7 @@ body:not(.light-theme) .contact-info a {
   }
 }
 
-/* ── Apple-style Theme Toggle Icon Animation ── */
+/* â”€â”€ Apple-style Theme Toggle Icon Animation â”€â”€ */
 .theme-toggle-btn {
     background: transparent !important;
     border: none !important;
@@ -755,7 +778,7 @@ body.light-theme .clip-mask {
     transform: translate(14px, -14px) !important;
 }
 
-/* ── Placement Marquee CSS Animation ── */
+/* â”€â”€ Placement Marquee CSS Animation â”€â”€ */
 @keyframes marquee-scroll {
   0% {
     transform: translateX(0);
