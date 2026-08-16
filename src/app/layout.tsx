@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import ScrollToTop from "@/components/ScrollToTop";
-import SmoothScroll from "@/components/SmoothScroll";
+import { ScrollToTop, SmoothScroll } from "@/components";
+import Script from "next/script";
 
 const switzer = localFont({
   src: [
@@ -47,22 +47,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${switzer.variable} h-full antialiased`}>
+    <html lang="en" className={`${switzer.variable} h-full antialiased`} suppressHydrationWarning>
+      <head>
+        <Script src="/theme.js" strategy="beforeInteractive" />
+      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('theme');
-                  if (theme !== 'dark') {
-                    document.body.classList.add('light-theme');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
         <SmoothScroll />
         <ScrollToTop />
         {children}

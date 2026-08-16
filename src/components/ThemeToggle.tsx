@@ -1,9 +1,19 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
+import { motion, AnimatePresence, useAnimationFrame, useMotionValue, useSpring, type Variants, useInView, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { ArrowRight, ChevronRight, GraduationCap, BookOpen, Award, Sparkles, Compass } from "lucide-react";
+import Image from "next/image";
+import { FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebookF } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
+import Lenis from "lenis";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
-export default function ThemeToggle({ className }: { className?: string }) {
+// --- ThemeToggle.tsx ---
+export function ThemeToggle({ className }: { className?: string }) {
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -12,25 +22,28 @@ export default function ThemeToggle({ className }: { className?: string }) {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme === "dark") {
       setIsDark(true);
+      document.documentElement.classList.remove("light-theme");
       document.body.classList.remove("light-theme");
       document.documentElement.classList.add("dark");
     } else {
       setIsDark(false);
+      document.documentElement.classList.add("light-theme");
       document.body.classList.add("light-theme");
       document.documentElement.classList.remove("dark");
     }
   }, []);
 
   const toggleTheme = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const body = document.body;
     const switchTheme = () => {
       if (isDark) {
-        body.classList.add("light-theme");
+        document.documentElement.classList.add("light-theme");
+        document.body.classList.add("light-theme");
         document.documentElement.classList.remove("dark");
         localStorage.setItem("theme", "light");
         setIsDark(false);
       } else {
-        body.classList.remove("light-theme");
+        document.documentElement.classList.remove("light-theme");
+        document.body.classList.remove("light-theme");
         document.documentElement.classList.add("dark");
         localStorage.setItem("theme", "dark");
         setIsDark(true);
@@ -87,3 +100,4 @@ export default function ThemeToggle({ className }: { className?: string }) {
     </button>
   );
 }
+

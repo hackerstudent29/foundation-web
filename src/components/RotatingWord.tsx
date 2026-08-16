@@ -1,8 +1,18 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
+import { motion, AnimatePresence, useAnimationFrame, useMotionValue, useSpring, type Variants, useInView, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { ArrowRight, ChevronRight, GraduationCap, BookOpen, Award, Sparkles, Compass } from "lucide-react";
+import Image from "next/image";
+import { FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebookF } from "react-icons/fa6";
+import { cn } from "@/lib/utils";
+import Lenis from "lenis";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
+// --- RotatingWord types & helpers ---
 interface WordStep {
   word: string;
   duration: number;
@@ -16,52 +26,19 @@ interface RotatingWordProps {
   homeColor?: string;
 }
 
-const WORD_IMAGES: Record<string, { url: string; size?: string; pos?: string }> = {
-  Innovation: {
-    url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-  },
-  Technology: {
-    url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-  },
-  Excellence: {
-    url: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80",
-    pos: "top center",
-  },
-  Design: {
-    url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
-  },
-  Creativity: {
-    url: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80",
-  },
-  Craftsmanship: {
-    url: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=800&q=80",
-  },
-};
-
-/**
- * Always returns the full set of background-related style keys so React
- * never sees a property added or removed between renders — fixes the
- * "shorthand vs non-shorthand" warning.
- */
 function getTextStyle(
   word: string,
   homeWord: string,
   homeColor: string
 ): React.CSSProperties {
-  const img = word !== homeWord ? WORD_IMAGES[word] : undefined;
-
-  return {
-    color: img ? ("transparent" as const) : homeColor,
-    backgroundImage: img ? `url("${img.url}")` : undefined,
-    backgroundSize: img ? (img.size ?? "cover") : undefined,
-    backgroundPosition: img ? (img.pos ?? "center") : undefined,
-    WebkitBackgroundClip: img ? ("text" as const) : undefined,
-    WebkitTextFillColor: img ? ("transparent" as const) : undefined,
-    backgroundClip: img ? ("text" as const) : undefined,
-  };
+  if (word === homeWord) {
+    return { color: homeColor };
+  }
+  return { color: "var(--primary-blue)" };
 }
 
-export default function RotatingWord({
+export function RotatingWord({
+
   homeWord,
   words,
   homeDuration = 5000,
@@ -129,3 +106,4 @@ export default function RotatingWord({
     </motion.span>
   );
 }
+

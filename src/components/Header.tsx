@@ -1,11 +1,21 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
+import { motion, AnimatePresence, useAnimationFrame, useMotionValue, useSpring, type Variants, useInView, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { ArrowRight, ChevronRight, GraduationCap, BookOpen, Award, Sparkles, Compass } from "lucide-react";
 import Image from "next/image";
-import ThemeToggle from "./ThemeToggle";
+import { FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebookF } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
+import Lenis from "lenis";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
-export default function Header() {
+import { ThemeToggle } from "./ThemeToggle";
+
+// --- Header.tsx ---
+export function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMobileSub, setActiveMobileSub] = useState<string | null>(null);
@@ -69,7 +79,7 @@ export default function Header() {
         id="header"
         onMouseLeave={handleHeaderMouseLeave}
       >
-        <div className="header-container header-padding">
+        <div className="header-container">
           <a href="#" className="logo-link" id="logo-link" aria-label="MSAJCEA Home">
             <img src="/images/msajce-logo-transparent.png" alt="MSAJCEA Logo" className="header-logo" />
           </a>
@@ -425,3 +435,8 @@ export default function Header() {
     </>
   );
 }
+
+
+
+
+

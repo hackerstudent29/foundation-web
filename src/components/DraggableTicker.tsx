@@ -1,8 +1,18 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useCallback } from "react";
-import { useAnimationFrame, useMotionValue, useSpring } from "framer-motion";
+import React, { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
+import { motion, AnimatePresence, useAnimationFrame, useMotionValue, useSpring, type Variants, useInView, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { ArrowRight, ChevronRight, GraduationCap, BookOpen, Award, Sparkles, Compass } from "lucide-react";
+import Image from "next/image";
+import { FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebookF } from "react-icons/fa6";
+import { cn } from "@/lib/utils";
+import Lenis from "lenis";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
+// --- DraggableTicker.tsx ---
 interface TickerProps {
   children?: React.ReactNode[];
   speed?: number; // pixels per second
@@ -24,7 +34,7 @@ interface TickerProps {
   itemWidth?: number;
 }
 
-export default function DraggableTicker(props: TickerProps) {
+export function DraggableTicker(props: TickerProps) {
   const {
     children = [],
     speed = 100,
@@ -313,3 +323,4 @@ export default function DraggableTicker(props: TickerProps) {
     </div>
   );
 }
+

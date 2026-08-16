@@ -1,6 +1,8 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
 @import "../styles/index.css";
+@source "../components/**/*.{ts,tsx,js,jsx}";
+@source "../app/**/*.{ts,tsx,js,jsx}";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* ── Lenis smooth scroll base ── */
 html.lenis, html.lenis body {
@@ -787,6 +789,201 @@ body.light-theme .clip-mask {
     transform: translateX(-100%);
   }
 }
+/* Set Lineal font for tagline accents */
+.hero-tagline, .dept-code, .cell-tag, .stats-label {
+    font-family: var(--font-accent) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Ensure Switzer is used as the sans-serif font */
+:root {
+    --font-sans: 'Switzer', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* Custom logo sizes & color-invert prevention */
+#header.main-header .logo-link {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+#header.main-header .header-logo {
+    height: 240px !important;
+    max-height: 240px !important;
+    margin-top: -76px !important;
+    margin-bottom: -92px !important;
+    width: auto !important;
+    align-self: center !important;
+    filter: none !important;
+}
+
+body.light-theme #header.main-header .header-logo,
+body:not(.light-theme) #header.main-header .header-logo {
+    filter: none !important;
+}
+
+.footer-logo {
+    height: 320px !important;
+    max-height: 320px !important;
+    margin-top: -110px !important;
+    margin-bottom: -110px !important;
+    width: auto !important;
+    filter: none !important;
+}
+
+body.light-theme .footer-logo,
+body:not(.light-theme) .footer-logo {
+    filter: none !important;
+}
+
+/* Footer text alignment under logo starting edge */
+.footer-brand p {
+    padding-left: 10px !important;
+    margin: 0 !important;
+}
+
+.footer-brand .copyright {
+    padding-left: 10px !important;
+    margin-top: 8px !important;
+}
+
+/* Footer-specific clickable links layout */
+
+.contact-info a {
+    color: inherit !important;
+    text-decoration: none !important;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3) !important;
+    transition: opacity 0.2s ease, border-color 0.2s ease !important;
+}
+
+body:not(.light-theme) .contact-info a {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.4) !important;
+}
+
+.contact-info a:hover {
+    opacity: 0.8 !important;
+    border-bottom-style: solid !important;
+}
+
+/* â”€â”€ Circular View Transition for Theme Toggle â”€â”€ */
+::view-transition-image-pair(root) {
+  isolation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  display: block;
+}
+
+/* The new theme page sweeps over the old one using a circular clip path */
+::view-transition-new(root) {
+  animation: 0.45s cubic-bezier(0.25, 1, 0.5, 1) both reveal-circle;
+}
+
+@keyframes reveal-circle {
+  from {
+    clip-path: circle(0px at var(--transition-x) var(--transition-y));
+  }
+  to {
+    clip-path: circle(var(--transition-r) at var(--transition-x) var(--transition-y));
+  }
+}
+
+/* â”€â”€ Apple-style Theme Toggle Icon Animation â”€â”€ */
+.theme-toggle-btn {
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    transition: background-color 0.3s ease !important;
+    width: 40px !important;
+    height: 40px !important;
+    color: var(--text-color) !important;
+    outline: none !important;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(120, 120, 120, 0.15) !important;
+}
+
+.theme-toggle-svg {
+    width: 24px !important;
+    height: 24px !important;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transform-origin: center !important;
+}
+
+/* Center circle transitions */
+.theme-center-circle {
+    transition: r 0.4s cubic-bezier(0.16, 1, 0.3, 1), fill 0.4s ease !important;
+    transform-origin: center !important;
+}
+
+/* Rays transition */
+.theme-rays {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transform-origin: center !important;
+}
+
+/* Clip mask transition to cut a crescent moon shape */
+.clip-mask {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transform-origin: center !important;
+}
+
+/* Dark Theme (Moon Mode) - default state */
+body:not(.light-theme) .theme-toggle-svg {
+    transform: rotate(40deg) !important;
+}
+
+body:not(.light-theme) .theme-center-circle {
+    r: 9px !important;
+}
+
+body:not(.light-theme) .theme-rays {
+    opacity: 0 !important;
+    transform: scale(0.6) !important;
+}
+
+body:not(.light-theme) .clip-mask {
+    transform: translate(-7px, 7px) !important;
+}
+
+/* Light Theme (Sun Mode) */
+body.light-theme .theme-toggle-svg {
+    transform: rotate(90deg) !important;
+}
+
+body.light-theme .theme-center-circle {
+    r: 5.5px !important;
+}
+
+body.light-theme .theme-rays {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+body.light-theme .clip-mask {
+    transform: translate(14px, -14px) !important;
+}
+
+/* â”€â”€ Placement Marquee CSS Animation â”€â”€ */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 .animate-marquee {
   animation: marquee-scroll 25s linear infinite !important;
@@ -801,6 +998,25 @@ body.light-theme .clip-mask {
   }
 }
 
+.animate-marquee {
+  animation: marquee-scroll 25s linear infinite !important;
+}
+
 .animate-marquee-half {
   animation: marquee-scroll-half 25s linear infinite !important;
 }
+
+/* ── PlacementMarquee: horizontal infinite slide ── */
+@keyframes marquee-slide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+/* ── Logo filter: dark in light mode, light in dark mode ── */
+:root {
+  --logo-filter: grayscale(100%) brightness(0.25);
+}
+.dark {
+  --logo-filter: grayscale(100%) brightness(2) invert(0);
+}
+

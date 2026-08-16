@@ -1,8 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState, ReactNode } from "react";
+import React, { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
+import { motion, AnimatePresence, useAnimationFrame, useMotionValue, useSpring, type Variants, useInView, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { ArrowRight, ChevronRight, GraduationCap, BookOpen, Award, Sparkles, Compass } from "lucide-react";
+import Image from "next/image";
+import { FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebookF } from "react-icons/fa6";
+import { cn } from "@/lib/utils";
+import Lenis from "lenis";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
-export default function FooterRevealWrapper({ children }: { children: ReactNode }) {
+// --- FooterRevealWrapper.tsx ---
+export function FooterRevealWrapper({ children }: { children: ReactNode }) {
   const [footerHeight, setFooterHeight] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
   const footerRef = useRef<HTMLDivElement>(null);
@@ -57,3 +68,4 @@ export default function FooterRevealWrapper({ children }: { children: ReactNode 
     </>
   );
 }
+

@@ -1,55 +1,65 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
+import { motion, AnimatePresence, useAnimationFrame, useMotionValue, useSpring, type Variants, useInView, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { ArrowRight, ChevronRight, GraduationCap, BookOpen, Award, Sparkles, Compass } from "lucide-react";
+import Image from "next/image";
+import { FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebookF } from "react-icons/fa6";
+import { cn } from "@/lib/utils";
+import Lenis from "lenis";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
-interface LogoItem {
+export interface LogoItem {
   src: string;
   alt: string;
   scale?: number;
 }
-
-interface PlacementMarqueeProps {
-  logos: LogoItem[];
+export interface PlacementMarqueeProps {
+  logos?: LogoItem[];
 }
 
-export default function PlacementMarquee({ logos = [] }: PlacementMarqueeProps) {
-  const logoImg = (logo: LogoItem, key: string) => (
-    <div key={key} className="flex-shrink-0 flex items-center justify-center bg-transparent w-[120px] h-[55px] sm:w-[160px] sm:h-[65px] md:w-[180px] md:h-[75px] transition-transform hover:scale-110">
-      <img
-        src={logo.src}
-        alt={logo.alt}
-        className="max-w-full max-h-full object-contain"
-        style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
-        loading="lazy"
-      />
-    </div>
-  );
-
-  const row2Logos = [...logos.slice(5), ...logos.slice(0, 5)];
-
+export function PlacementMarquee({ logos = [] }: { logos?: { src: string; alt: string; scale?: number }[] }) {
   return (
-    <div className="placement-marquee-container w-full py-8 bg-transparent select-none overflow-hidden">
-      <div className="flex flex-col gap-6 mt-2">
-        {/* Row 1 - Left to Right */}
-        <div className="marquee-wrapper overflow-hidden relative w-full flex group">
-          <div className="flex-shrink-0 flex gap-20 min-w-full animate-marquee pr-20 group-hover:[animation-play-state:paused]" style={{ animationDuration: '40s' }}>
-            {logos.map((logo, idx) => logoImg(logo, `r1-1-${idx}`))}
-          </div>
-          <div className="flex-shrink-0 flex gap-20 min-w-full animate-marquee pr-20 group-hover:[animation-play-state:paused]" style={{ animationDuration: '40s' }} aria-hidden="true">
-            {logos.map((logo, idx) => logoImg(logo, `r1-2-${idx}`))}
-          </div>
-        </div>
+    <div className="relative w-full overflow-hidden py-2" aria-label="Top Recruiters">
+      {/* Fade masks left and right */}
+      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24"
+        style={{ background: "linear-gradient(to right, var(--bg-color) 0%, transparent 100%)" }} />
+      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24"
+        style={{ background: "linear-gradient(to left, var(--bg-color) 0%, transparent 100%)" }} />
 
-        {/* Row 2 - Same Direction, Different Pace, Shifted Logos */}
-        <div className="marquee-wrapper overflow-hidden relative w-full flex group mb-4">
-          <div className="flex-shrink-0 flex gap-20 min-w-full animate-marquee pr-20 group-hover:[animation-play-state:paused]" style={{ animationDuration: '30s' }}>
-            {row2Logos.map((logo, idx) => logoImg(logo, `r2-1-${idx}`))}
+      {/* Scrolling track */}
+      <div
+        className="flex items-center"
+        style={{
+          animation: "marquee-slide 30s linear infinite",
+          width: "max-content",
+          gap: "64px",
+        }}
+      >
+        {[...logos, ...logos, ...logos].map((logo, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300"
+            style={{ height: "52px" }}
+          >
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              style={{
+                height: `${Math.round(36 * (logo.scale || 1))}px`,
+                width: "auto",
+                maxWidth: "160px",
+                objectFit: "contain",
+                filter: "var(--logo-filter, grayscale(100%) brightness(0.4))",
+              }}
+            />
           </div>
-          <div className="flex-shrink-0 flex gap-20 min-w-full animate-marquee pr-20 group-hover:[animation-play-state:paused]" style={{ animationDuration: '30s' }} aria-hidden="true">
-            {row2Logos.map((logo, idx) => logoImg(logo, `r2-2-${idx}`))}
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
 }
+

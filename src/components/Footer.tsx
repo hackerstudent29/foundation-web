@@ -1,13 +1,22 @@
 "use client";
 
+import React, { useState, useEffect, useRef, useCallback, type ReactNode } from "react";
+import { motion, AnimatePresence, useAnimationFrame, useMotionValue, useSpring, type Variants, useInView, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { ArrowRight, ChevronRight, GraduationCap, BookOpen, Award, Sparkles, Compass } from "lucide-react";
 import Image from "next/image";
-import React, { type ReactNode } from "react";
-import { motion, Variants } from "framer-motion";
 import { FaInstagram, FaLinkedin, FaYoutube, FaXTwitter, FaFacebookF } from "react-icons/fa6";
-import FooterRevealWrapper from "./FooterRevealWrapper";
+import { cn } from "@/lib/utils";
+import Lenis from "lenis";
+import "swiper/css";
+import "swiper/css/effect-fade";
+
+// --- Footer.tsx ---
+import { FooterRevealWrapper } from "./FooterRevealWrapper";
 
 // --- Animation Variants ---
-const containerVariants: Variants = {
+const footerContainerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -18,7 +27,7 @@ const containerVariants: Variants = {
   },
 };
 
-const itemVariants: Variants = {
+const footerItemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
@@ -26,7 +35,7 @@ const itemVariants: Variants = {
 // --- Helper Components ---
 function LinkItem({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <motion.li variants={itemVariants}>
+    <motion.li variants={footerItemVariants}>
       <a
         href={href}
         className="group relative inline-flex items-center text-[15px] custom-footer-text-muted hover:text-[var(--primary-blue)] transition-colors duration-300 font-normal pb-0.5"
@@ -65,11 +74,11 @@ function FooterLinksSection({ animate }: { animate: boolean }) {
     <div className="relative w-full max-w-[1440px] mx-auto px-8 md:px-16 z-50">
       <motion.div 
         className="grid grid-cols-1 md:grid-cols-12 gap-y-12 w-full"
-        variants={containerVariants}
+        variants={footerContainerVariants}
         initial="hidden"
         animate={animate ? "visible" : "hidden"}
       >
-        <motion.div variants={itemVariants} className="flex flex-col items-start md:col-start-2 md:col-span-5 pr-8">
+        <motion.div variants={footerItemVariants} className="flex flex-col items-start md:col-start-2 md:col-span-5 pr-8">
           <Image
             src="/images/msajce-typography.svg"
             alt="MSAJCEA Typography Logo"
@@ -90,7 +99,7 @@ function FooterLinksSection({ animate }: { animate: boolean }) {
 
         <div className="md:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-10 md:gap-8 lg:gap-16 mt-8 md:mt-0">
           <div className="flex flex-col">
-            <motion.h4 variants={itemVariants} className="text-[15px] custom-footer-text-muted pb-2 font-bold uppercase tracking-[0.15em] text-[var(--text-color)]">
+            <motion.h4 variants={footerItemVariants} className="text-[15px] custom-footer-text-muted pb-2 font-bold uppercase tracking-[0.15em] text-[var(--text-color)]">
               ADMISSIONS
             </motion.h4>
             <ul className="flex flex-col gap-2.5" style={{ marginTop: '20px' }}>
@@ -104,7 +113,7 @@ function FooterLinksSection({ animate }: { animate: boolean }) {
           </div>
 
           <div className="flex flex-col">
-            <motion.h4 variants={itemVariants} className="text-[15px] custom-footer-text-muted pb-2 font-bold uppercase tracking-[0.15em] text-[var(--text-color)]">
+            <motion.h4 variants={footerItemVariants} className="text-[15px] custom-footer-text-muted pb-2 font-bold uppercase tracking-[0.15em] text-[var(--text-color)]">
               DEPARTMENTS
             </motion.h4>
             <ul className="flex flex-col gap-2.5" style={{ marginTop: '20px' }}>
@@ -119,7 +128,7 @@ function FooterLinksSection({ animate }: { animate: boolean }) {
           </div>
 
           <div className="flex flex-col">
-            <motion.h4 variants={itemVariants} className="text-[15px] custom-footer-text-muted pb-2 font-bold uppercase tracking-[0.15em] text-[var(--text-color)]">
+            <motion.h4 variants={footerItemVariants} className="text-[15px] custom-footer-text-muted pb-2 font-bold uppercase tracking-[0.15em] text-[var(--text-color)]">
               QUICK LINKS
             </motion.h4>
             <ul className="flex flex-col gap-2.5" style={{ marginTop: '20px' }}>
@@ -220,7 +229,7 @@ function FooterCopyrightBar() {
 }
 
 
-export default function Footer() {
+export function Footer() {
   const [revealed, setRevealed] = React.useState(false);
 
   React.useEffect(() => {
@@ -255,3 +264,4 @@ export default function Footer() {
     </FooterRevealWrapper>
   );
 }
+
